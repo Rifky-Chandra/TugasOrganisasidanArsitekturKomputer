@@ -35,13 +35,16 @@ Contoh:
  1. Semakin besar delay propagasi untuk mengkoordinasikan penggunaan bus.
  2. Antrian penggunaan bus semakin panjang.
  3. Dimungkinkan habisnya kapasitas transfer bus sehingga memperlambat data.
-Antisipasi  dan  solusi  persoalan  di  atas  adalah  penggunaan  bus  jamak  yang  hierarkis. Modul  –  modul  dikalasifikasikan         berdasarkan  kebutuhan terhadap lebar dan kecepatan bus. Bus biasany terdiri atas bus lokal, bus sistem, dan bus ekspansi. 
+Antisipasi  dan  solusi  persoalan  di  atas  adalah  penggunaan  bus  jamak  yang  hierarkis. Modul  –  modul  dikalasifikasikan berdasarkan  kebutuhan terhadap lebar dan kecepatan bus. Bus biasanya terdiri atas bus lokal, bus sistem, dan bus ekspansi. 
 
 ## 3. ⁠Umumnya perangkat berprioritas paling rendah memiliki waktu tunggu rata-rata yang paling singkat. Dengan dasar ini biasanya CPU diberi perioritas tertinggi pada SBI. Sebutkan alasan perangkat berprioritas 16 memiliki waktu tunggu rata-rata paling rendah? Dibawah kondisi seperti apa keadaan diatas tidak berlaku?
 Perangkat berpriotritas 16 memiliki waktu tunggu rata rata paling rendah  karena :  
   Dalam sistem bus, perangkat dengan prioritas lebih rendah biasanya memiliki waktu tunggu lebih lama karena akses bus diberikan terlebih dahulu kepada perangkat dengan prioritas lebih tinggi (angka prioritas lebih kecil). Bus data berfungsi menyalurkan data antara komponen komputer melalui jalur sinyal paralel (8, 16, 32 bit, atau lebih) yang bersifat dua arah (bidirectional). Hanya satu perangkat yang dapat menggunakan bus dalam satu waktu, sehingga perangkat harus memiliki tiga state (tristate) agar tidak mengganggu perangkat lain.
+### aturan ini tidak berlaku jika menggunakan sistem dan metode seperti:
+1. Penjadwalan Prioritas Tetap (Fixed Priority Scheduling)
+2. Penjadwalan Round-Robin
 
-Sumber :
+Sumber Referensi:
   1. Organisasi Komputer: Struktur Bus dan Contohnya. ( https://innaimaskurniatry.blogspot.com/2017/06/struktur-hubungan-bus-dan-contohnya.html)
   2. Belajar arsitektur sistem bus~ | *Inspiration Of Computer* ( https://gamirarindu4.blogspot.com/2015/12/belajar-arsitektur-sistem-bus.html )
   3. https://123dok.com/document/zg65782q-bab-sistem-bus-organisasi-komputer.html
